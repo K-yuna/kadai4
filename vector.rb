@@ -18,4 +18,22 @@ class Vector
     puts ( Math.sqrt(@xy) )
   end
 
+  def x
+    @x
+  end
+
+  def y
+    @y
+  end
+
+  def add(v)
+    Vector.new( @x+v.x, @y+v.y )
+  end
+
 end
+
+v1 = Vector.new( 1, 2 )
+v2 = Vector.new( 3, 4 )
+v3 = v1.add(v2)
+
+puts v3.to_s
